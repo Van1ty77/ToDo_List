@@ -28,7 +28,6 @@ public class Task {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }

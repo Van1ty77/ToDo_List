@@ -18,15 +18,6 @@ public class Category {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks;
 
-    // Конструкторы
-    public Category() {
-    }
-
-    public Category(String name) {
-        this.name = name;
-    }
-
-    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }
@@ -49,13 +40,5 @@ public class Category {
 
     public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
-    }
-
-    @Override
-    public String toString() {
-        return "Category{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
     }
 }
